@@ -1,0 +1,195 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.navbar-dark .navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+
+/* Sample CSS styles for the icons */
+.html-icon {
+    color: #E44D26; /* HTML color */
+}
+
+
+.css-icon {
+    color: #2965F1; /* CSS color */
+}
+
+.js-icon {
+    color: #d8c53a; /* JavaScript color */
+}
+
+.php-icon {
+    color: #777BB4; /* PHP color */
+}
+
+.database-icon {
+    color: #00758F; /* Database color */
+}
+
+.laravel-icon {
+    color: #FF2D20; /* Laravel color */
+}
+
+.bootstrap-icon{
+    color: #320243; /* Laravel color */
+}
+
+.label{
+    color: #d2d1d1;
+}
+
+
+/* Add this CSS to your stylesheet or in a <style> tag within the HTML document */
+.skills-row {
+    padding: 30px 0 0 0; /* Add some padding to the row */
+    border-radius: 15px; /* Add rounded corners */
+}
+
+/* Add this CSS to your stylesheet or in a <style> tag within the HTML document */
+.skills-row .fa-3x,
+.skills-row .label {
+    transition: all 0.2s ease; /* Adjust the duration for a smoother or faster transition */
+}
+
+.skills-row .fa-3x:hover,
+.skills-row .label:hover {
+    transform: scale(1.2); /* Adjust the scale factor as needed */
+}
+
+.project-folders {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .folder {
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #f4f1f1;
+    border-radius: 10px;
+    transition: transform 0.2s;
+    width: 250px;
+  }
+
+  .folder:hover {
+    transform: scale(1.05);
+  }
+
+  .folder i {
+    font-size: 48px;
+    color: #007BFF; /* You can use your desired color code */
+
+  }
+
+  .folder h3 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+
+  .folder p {
+    font-size: 16px;
+    color: #555;
+  }
+
+  .custom-width-folder {
+    width: 400px;
+    max-width: 100%; /* Ensure it's responsive within its container */
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.custom-width-folder:hover {
+    transform: scale(1.05);
+}
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: #f4f4f4; /* Background color for a more realistic look */
+}
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.logo {
+    width: 240px; /* Adjust the width and height as needed */
+    height: 200px;
+}
+
+.loading-bar-container {
+    width: 100%; /* Adjust the width as needed */
+    background: #e6e6e6; /* Loading bar container background color */
+    border-radius: 5px;
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.loading-bar {
+    width: 0; /* Start with 0% width */
+    height: 10px;
+    background: #121314; /* Loading bar color */
+    border-radius: 5px;
+    animation: expandLoadingBar 1.5s linear forwards; /* Animation duration and timing function */
+}
+
+@keyframes expandLoadingBar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.loading-text {
+    font-size: 20px;
+    color: #050404; /* Loading text color */
+    margin-top: 10px;
+}
